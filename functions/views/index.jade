@@ -23,25 +23,25 @@ html(lang='en')
         h2
           span.emoji &#x1F464 
           if (instagram != '')
-            a(href='https://instagram.com/#{instagram}') #{name}
+            a(href='https://instagram.com/#{instagram}' target='_blank') #{name}
           else 
             | #{name}
         h2
           span.emoji &#x1F308 
           if (work_instagram != '')
-            a(href='https://instagram.com/#{work_instagram}') #{workplace}
+            a(href='https://instagram.com/#{work_instagram}' target='_blank') #{workplace}
           else 
             | #{workplace}
         if (venmo != '')
           h3
             span.emoji &#x1F911 
             span.pay-type Venmo 
-            a(href='https://venmo.com/#{venmo}') #{venmo}
+            a(href='https://venmo.com/#{venmo}' target='_blank') #{venmo}
         if (cashapp != '')
           h3
             span.emoji &#x1F4B8 
             span.pay-type Cash App 
-            a(href='https://cash.app/#{cashapp}') #{cashapp}
+            a(href='https://cash.app/#{cashapp}' target='_blank') #{cashapp}
         if (paypal != '')
           h3
             span.emoji &#x1F4B0 
@@ -49,14 +49,16 @@ html(lang='en')
             span #{paypal}
       footer
         p
-          a(href='https://docs.google.com/spreadsheets/d/11V4Vj-2lm3iKADE-j3URYJqq0bPRXiC7NmWBttUzJpc/') Data
-          | , design and development by three queers in NYC.
+          a(href='https://docs.google.com/spreadsheets/d/11V4Vj-2lm3iKADE-j3URYJqq0bPRXiC7NmWBttUzJpc/' target='_blank') Data
+          | , design and 
+          a(href='https://github.com/KassidyKnight/their-tips' target='_blank') development
+          |  by three queers in NYC.
           br
-          a(href='http://thevirtualtipjar.com/') Original idea
+          a(href='http://thevirtualtipjar.com/' target='_blank') Original idea
           |  and 
-          a(href='https://github.com/sgaudaen/VirtualTipJar') source code
+          a(href='https://github.com/sgaudaen/VirtualTipJar' target='_blank') source code
           |  provided by 
-          a(href='https://januarythird.co') January Third
+          a(href='https://januarythird.co' target='_blank') January Third
           | . 
           br
           | Questions? 
