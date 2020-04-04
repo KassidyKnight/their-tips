@@ -1,0 +1,27 @@
+{
+  "name": "theirtips-master",
+  "version": "1.0.0",
+  "description": "Virtual tip jar for NYC's queer service folx.",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.9.0",
+    "firebase-functions": "^3.3.0",
+    "csv": "^5.3.2",
+    "csv-parser": "^2.3.2",
+    "express": "^4.17.1",
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
