@@ -72,14 +72,6 @@ h3 {
   border-style: solid;
 }
 
-.left-block button:hover {
-  background-position: left bottom;
-  color: white;
-  border-color: white;
-  border-width: 2px;
-  cursor: pointer;
-}
-
 .right-block {
   background-color: #ffffff;
   position: absolute;
@@ -159,7 +151,7 @@ h3 {
   font-size: clamp(10px, 2vw, 14px);
 }
 
-/* ignore hover on mobile */
+/* all hover interactions ignored on mobile */
 @media not all and (pointer: coarse) {
   .right-block footer .contact a:hover {
     font-size: 0;
@@ -170,6 +162,13 @@ h3 {
     content: "us@theirtips.com";
     font-size: clamp(10px, 2vw, 14px);
     line-height: 1.5rem;
+  }
+  .left-block button:hover {
+    background-position: left bottom;
+    color: white;
+    border-color: white;
+    border-width: 2px;
+    cursor: pointer;
   }
 }
 
