@@ -1,0 +1,65 @@
+html(lang='en')
+  head
+    meta(name='viewport', content='initial-scale=1')
+    meta(charset='utf-8')
+    title Their Tips
+    meta(name='description', content="Virtual tip jar for NYC's queer service folx.")
+    link(rel='stylesheet', href='/style.css')
+    link(href='https://fonts.googleapis.com/css2?family=Catamaran:wght@800&display=swap' rel='stylesheet')
+    link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel='stylesheet')
+  body
+    .left-block
+      h1
+        | We're compiling a list of 
+        span.underline queer service industry
+        |  folx so we can tip them.
+      button.button(onclick='window.location.reload();') Randomize →
+    .bg-block
+    .right-block
+      .link-container
+        a(href='https://forms.gle/uP15B6nfmdjN8cr3A', target='_blank') Add yourself
+        a(href='https://docs.google.com/spreadsheets/d/1YLOUTUPRe8Z60eO1_KmBFRlCO1W40sMPuN87_MPp5T0/edit?usp=sharing', target='_blank') Tell us who you tipped
+      .entry
+        h2
+          span.emoji &#x1F464 
+          if (instagram != '')
+            a(href='https://instagram.com/#{instagram}') #{name}
+          else 
+            | #{name}
+        h2
+          span.emoji &#x1F308 
+          if (work_instagram != '')
+            a(href='https://instagram.com/#{work_instagram}') #{workplace}
+          else 
+            | #{workplace}
+        if (venmo != '')
+          h3
+            span.emoji &#x1F911 
+            span.pay-type Venmo 
+            a(href='https://venmo.com/#{venmo}') #{venmo}
+        if (cashapp != '')
+          h3
+            span.emoji &#x1F4B8 
+            span.pay-type Cash App 
+            a(href='https://cash.app/#{cashapp}') #{cashapp}
+        if (paypal != '')
+          h3
+            span.emoji &#x1F4B0 
+            span.pay-type PayPal 
+            span #{paypal}
+      footer
+        p
+          a(href='https://docs.google.com/spreadsheets/d/11V4Vj-2lm3iKADE-j3URYJqq0bPRXiC7NmWBttUzJpc/') Data
+          | , design and development by three queers in NYC.
+          br
+          a(href='http://thevirtualtipjar.com/') Original idea
+          |  and 
+          a(href='https://github.com/sgaudaen/VirtualTipJar') source code
+          |  provided by 
+          a(href='https://januarythird.co') January Third
+          | . 
+          br
+          | Questions? 
+          span.contact 
+            a(href='mailto:us@theirtips.com') Email us
+          | . Tip generously if you can!

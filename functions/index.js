@@ -6,10 +6,10 @@ var data_array = [];
 var count = 0;
 
 const app = express();
+app.set("views", path.join(__dirname, "./views"));
 app.set("view engine", "jade");
-app.set("views", path.join(__dirname, "../public"));
 
-app.get("/", (req, res) => {
+app.get("", (req, res) => {
   const csv = require("csv-parser");
   const fs = require("fs");
   const filepath = path.join(__dirname, "data.csv");
